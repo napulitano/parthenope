@@ -29,6 +29,7 @@
 	</properties>
     <modules>
         <module>parthenope-app</module>
+        <module>parthenope-it</module>
     </modules>
     <dependencyManagement>
         <dependencies>
