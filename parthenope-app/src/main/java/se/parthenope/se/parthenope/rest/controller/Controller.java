@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest;
+package se.parthenope.se.parthenope.rest.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.nimbusds.jose.JOSEException;
@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
+import se.parthenope.se.parthenope.rest.model.ApiKey;
+import se.parthenope.se.parthenope.rest.service.DomainService;
+import se.parthenope.se.parthenope.rest.service.JWSService;
+import se.parthenope.se.parthenope.rest.util.UidUtil;
 
 @RestController
 public class Controller {
@@ -18,14 +22,14 @@ public class Controller {
     @Autowired
     private DomainService domainService;
     @Autowired
-    private JWSUtil jwsUtil;
+    private JWSService jwsUtil;
 
     @GetMapping("/apis/generate/key/{domain}")
     public Mono<ResponseEntity<ApiKey>> apiKey(@PathVariable String domain) throws JsonProcessingException, JOSEException {
 
-        return Mono.justOrEmpty(new ResponseEntity<ApiKey>(ApiKey.builder()
+        return Mono.justOrEmpty(new ResponseEntity<>(ApiKey.builder()
                 .key(jwsUtil.sign(domainService.find(domain)))
-                .id(IDUtil.uuid(domain).toString())
+                .id(UidUtil.uuid(domain))
                 .build(),
                 HttpStatus.CREATED)
         );
@@ -34,10 +38,10 @@ public class Controller {
     @GetMapping("/apis/public/keys")
     public Mono<ResponseEntity<String>> publicKey() {
 
-        JWK jwk = new RSAKey.Builder(jwsUtil.publicKey)
-                .keyID(IDUtil.uuid("public-key")) // Give the key some ID (optional)
+        JWK jwk = new RSAKey.Builder(jwsUtil.getPublicKey())
+                .keyID(UidUtil.uuid("public-key")) // Give the key some ID (optional)
                 .build();
-        return Mono.justOrEmpty(new ResponseEntity<String>(jwk.toString(),HttpStatus.OK));
+        return Mono.justOrEmpty(new ResponseEntity<>(jwk.toString(), HttpStatus.OK));
     }
 
 }

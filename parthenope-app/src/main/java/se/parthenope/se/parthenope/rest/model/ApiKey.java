@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest;
+package se.parthenope.se.parthenope.rest.model;
 
 import lombok.Builder;
 import lombok.Data;
