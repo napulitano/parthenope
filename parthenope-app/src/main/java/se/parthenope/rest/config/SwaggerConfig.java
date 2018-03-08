@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest.config;
+package se.parthenope.rest.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.WebFluxConfigurationSupport;

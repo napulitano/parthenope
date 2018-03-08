@@ -1,0 +1,26 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "key": {
+      "$id": "/properties/key",
+      "type": "string",
+      "title": "The Key Schema",
+      "default": "",
+      "examples": [
+        "kkjk"
+      ]
+    },
+    "id": {
+      "$id": "/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "default": "",
+      "examples": [
+        "46d551da-e60a-587b-987d-ac7b1441911a"
+      ]
+    }
+  }
+}

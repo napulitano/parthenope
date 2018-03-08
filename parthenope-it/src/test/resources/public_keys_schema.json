@@ -1,0 +1,44 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "kty": {
+      "$id": "/properties/kty",
+      "type": "string",
+      "title": "The Kty Schema",
+      "default": "",
+      "examples": [
+        "RSA"
+      ]
+    },
+    "e": {
+      "$id": "/properties/e",
+      "type": "string",
+      "title": "The E Schema",
+      "default": "",
+      "examples": [
+        "AQAB"
+      ]
+    },
+    "kid": {
+      "$id": "/properties/kid",
+      "type": "string",
+      "title": "The Kid Schema",
+      "default": "",
+      "examples": [
+        "0943240d-4b50-58d8-bd78-45eb3c74607a"
+      ]
+    },
+    "n": {
+      "$id": "/properties/n",
+      "type": "string",
+      "title": "The N Schema",
+      "default": "",
+      "examples": [
+        "hhEcCtQHgeR1wqpnLHCIW2OCw6HbPW-An06ugkEQEYg8p-KJmIP12KqdfmQzSZIQWYpxFaFf0MgGFywxaMvScQUg2XUB5fdE6AF15zZGYW4qji48QV3jPACM4E7JZtFEj0MVrUwNJIZPZVnAS3Zl1bgAKKqYbNiGSIR2a7OeTDCjZrXbnmnpVmDXQyY2DAENA0F-9OvFLunmGAHhfOq-L3onhcIn0lWkeFndqBA--vD178PO0hqvRubWo5BiA-NQPTqGwf5NzlaLA_7L7weKBcNPbDl3S8Z8hRYeSkwqxwSoADVRGusCOwuqFQStHmoDOPgrvnNRrFGHRhqypVbNRQ"
+      ]
+    }
+  }
+}

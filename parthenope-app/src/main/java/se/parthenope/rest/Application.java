@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest;
+package se.parthenope.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

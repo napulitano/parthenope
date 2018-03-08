@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest;
+package se.parthenope.rest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
