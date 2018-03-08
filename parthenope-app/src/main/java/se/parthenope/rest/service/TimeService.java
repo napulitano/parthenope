@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest.service;
+package se.parthenope.rest.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

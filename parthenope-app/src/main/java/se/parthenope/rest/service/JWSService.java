@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest.service;
+package se.parthenope.rest.service;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -7,7 +7,7 @@ import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.RSASSASigner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import se.parthenope.se.parthenope.rest.util.UidUtil;
+import se.parthenope.rest.util.UidUtil;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;

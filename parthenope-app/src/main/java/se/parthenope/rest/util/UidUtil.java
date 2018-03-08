@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest.util;
+package se.parthenope.rest.util;
 
 import com.fasterxml.uuid.Generators;
 

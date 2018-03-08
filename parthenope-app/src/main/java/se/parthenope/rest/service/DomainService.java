@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest.service;
+package se.parthenope.rest.service;
 
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package se.parthenope.se.parthenope.rest.controller;
+package se.parthenope.rest.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.nimbusds.jose.JOSEException;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
-import se.parthenope.se.parthenope.rest.model.ApiKey;
-import se.parthenope.se.parthenope.rest.service.DomainService;
-import se.parthenope.se.parthenope.rest.service.JWSService;
-import se.parthenope.se.parthenope.rest.util.UidUtil;
+import se.parthenope.rest.model.ApiKey;
+import se.parthenope.rest.service.JWSService;
+import se.parthenope.rest.service.DomainService;
+import se.parthenope.rest.util.UidUtil;
 
 @RestController
 public class Controller {
